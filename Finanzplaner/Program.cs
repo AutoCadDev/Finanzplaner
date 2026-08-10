@@ -164,3 +164,6 @@ static double ZahlEinlesen(string text)
 
     return zahl;
 }
+
+//Git Hub Test
+Console.WriteLine("Finanzplaner v0.4");
