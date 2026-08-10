@@ -59,6 +59,7 @@ double Internet = 0;
 double Handy = 0;
 double Streaming = 0;
 double Spotify = 0;
+double Versicherungen = 0;
 double Lebensmittel = 0 ;
 double Drogerie = 0;
 double Autoleasing = 0;
@@ -81,6 +82,8 @@ Lebensmittel = ZahlEinlesen("Bitte geben Sie die Kosten für Lebensmittel ein: "
 
 Drogerie = ZahlEinlesen("Bitte geben Sie die Kosten für Drogerie ein: ");
 
+Versicherungen = ZahlEinlesen("Bitte geben Sie die Kosten für Versicherungen ein: ");
+
 Autoleasing = ZahlEinlesen("Bitte geben Sie die Kosten für Autoleasing ein: ");
 
 Kindergarten = ZahlEinlesen("Bitte geben Sie die Kosten für den Kindegarten ein: ");
@@ -98,6 +101,7 @@ double gesamtAusgaben = Miete
     + Lebensmittel 
     + Drogerie
     + Autoleasing
+    + Versicherungen
     + Kindergarten
     + sonstigeAusgaben;
 
@@ -113,6 +117,7 @@ Console.WriteLine($"Spotify:           {Spotify,8:N2} Euro");
 Console.WriteLine($"Lebensmittel:      {Lebensmittel,8:N2} Euro");
 Console.WriteLine($"Drogerie:          {Drogerie,8:N2} Euro");
 Console.WriteLine($"Autoleasing:       {Autoleasing,8:N2} Euro");
+Console.WriteLine($"Versicherungen:    {Versicherungen,8:N2} Euro");
 Console.WriteLine($"Kindergarten:      {Kindergarten,8:N2} Euro");
 Console.WriteLine($"sonstige Ausgaben: {sonstigeAusgaben,8:N2} Euro");
 Console.WriteLine("------------------------------");
