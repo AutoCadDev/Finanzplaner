@@ -47,8 +47,10 @@ sonstigeEinnahmen = ZahlEinlesen("Bitte geben Sie die sonstigen Einnahmen ein: "
     + unterhalt 
     + sonstigeEinnahmen;
 
-// Ausgabe der Einnahmen
-Console.WriteLine("MONATLICHE EINNAHMEN");
+    #region Ausgaben von Ben 
+
+    // Ausgabe der Einnahmen
+    Console.WriteLine("MONATLICHE EINNAHMEN");
 Console.WriteLine("------------------------------");
 Console.WriteLine($"Gehalt Ben:        {gehaltBen,8:N2} Euro");
 Console.WriteLine($"Gehalt Janett:     {gehaltJanett,8:N2} Euro");
@@ -66,14 +68,14 @@ double Miete = 0;
 double Strom = 0;
 double Internet = 0;
 double Handy = 0;
-double Streaming = 0;
+double Spritgeld = 0;
 double Spotify = 0;
 double Versicherungen = 0;
 double GEZ = 0;
 double Lebensmittel = 0;
 double Drogerie = 0;
 double Autoleasing = 0;
-double Kindergarten = 0;
+double KindergartenLuca = 0;
 double sonstigeAusgaben = 0;
 
 Miete = ZahlEinlesen("Bitte geben Sie die Miete ein: ");
@@ -84,7 +86,7 @@ Internet = ZahlEinlesen("Bitte geben Sie die Kosten für Internet ein: ");
 
 Handy = ZahlEinlesen("Bitte geben Sie die Kosten für Handy ein: ");
 
-Streaming = ZahlEinlesen("Bitte geben Sie die Kosten für Streaming ein: ");
+Spritgeld = ZahlEinlesen("Bitte geben Sie die Kosten für Spritgeld ein: ");
 
 Spotify = ZahlEinlesen("Bitte geben Sie die Kosten für Spotify ein: ");
 
@@ -98,24 +100,24 @@ Versicherungen = ZahlEinlesen("Bitte geben Sie die Kosten für Versicherungen ei
 
 Autoleasing = ZahlEinlesen("Bitte geben Sie die Kosten für Autoleasing ein: ");
 
-Kindergarten = ZahlEinlesen("Bitte geben Sie die Kosten für den Kindegarten ein: ");
+KindergartenLuca = ZahlEinlesen("Bitte geben Sie die Kosten für den Kindergarten von Luca ein: ");
 
 sonstigeAusgaben = ZahlEinlesen("Bitte geben Sie die Kosten für den sonstige Ausgaben ein: ");
 
 // Berechnung der Gesamtausgaben
 
-double gesamtAusgaben = Miete 
+double gesamtAusgabenBen = Miete 
     + Strom 
     + Internet 
     + Handy 
-    + Streaming 
+    + Spritgeld 
     + Spotify 
     + GEZ
     + Lebensmittel 
     + Drogerie
     + Autoleasing
     + Versicherungen
-    + Kindergarten
+    + KindergartenLuca
     + sonstigeAusgaben;
 
 // Ausgabe
@@ -125,30 +127,116 @@ Console.WriteLine($"Miete:             {Miete,8:N2} Euro");
 Console.WriteLine($"Strom:             {Strom,8:N2} Euro");
 Console.WriteLine($"Internet:          {Internet,8:N2} Euro");
 Console.WriteLine($"Handy:             {Handy,8:N2} Euro");
-Console.WriteLine($"Streaming:         {Streaming,8:N2} Euro");
+Console.WriteLine($"Spritgeld:         {Spritgeld,8:N2} Euro");
 Console.WriteLine($"Spotify:           {Spotify,8:N2} Euro");
 Console.WriteLine($"GEZ:               {GEZ,8:N2} Euro");
 Console.WriteLine($"Lebensmittel:      {Lebensmittel,8:N2} Euro");
 Console.WriteLine($"Drogerie:          {Drogerie,8:N2} Euro");
 Console.WriteLine($"Autoleasing:       {Autoleasing,8:N2} Euro");
 Console.WriteLine($"Versicherungen:    {Versicherungen,8:N2} Euro");
-Console.WriteLine($"Kindergarten:      {Kindergarten,8:N2} Euro");
+Console.WriteLine($"KindergartenLuca:  {KindergartenLuca,8:N2} Euro");
 Console.WriteLine($"sonstige Ausgaben: {sonstigeAusgaben,8:N2} Euro");
 Console.WriteLine("------------------------------");
-Console.WriteLine($"Gesamtausgaben:    {gesamtAusgaben,8:N2} Euro");
+Console.WriteLine($"Gesamtausgaben:    {gesamtAusgabenBen,8:N2} Euro");
 
-//Überschuss am Monatsende
-double ueberschuss = geamteinnahmen - gesamtAusgaben;
+    #endregion
+
+    #region Ausgaben von Janett
+ 
+    //Ausgaben 
+    double LebensmittelJanett = 0;
+    double AutoleasingJanett = 0;
+    double Kredit1 = 0;
+    double Kredit2 = 0;
+    double Tanken = 0;
+    double KindergartenLilly = 0;
+    double HandyJanett = 0;
+    double Amazon = 0;
+    double Netflix = 0;
+    double Disney = 0;
+    double Autoversicherung = 0;
+    double Klarna = 0;
+    double sonstigeAusgabenJanett = 0;
+
+    LebensmittelJanett = ZahlEinlesen("Bitte geben Sie die Kosten für Lebensmittel ein: ");
+
+    AutoleasingJanett = ZahlEinlesen("Bitte geben Sie die Kosten für Autoleasing ein: ");
+
+    Kredit1 = ZahlEinlesen("Bitte geben Sie die Kosten für Kredit1 ein: ");
+
+    Kredit2 = ZahlEinlesen("Bitte geben Sie die Kosten für Kredit2 ein: ");
+
+    Tanken = ZahlEinlesen("Bitte geben Sie die Kosten für Tanken ein: ");
+
+    KindergartenLilly = ZahlEinlesen("Bitte geben Sie die Kosten für den Kindergarten von Lilly ein: ");
+
+    HandyJanett = ZahlEinlesen("Bitte geben Sie die Kosten für Handy ein: ");
+
+    Amazon = ZahlEinlesen("Bitte geben Sie die Kosten für Amazon ein: ");
+
+    Netflix = ZahlEinlesen("Bitte geben Sie die Kosten für Netflix ein: ");
+
+    Disney = ZahlEinlesen("Bitte geben Sie die Kosten für Disney ein: ");
+
+    Autoversicherung = ZahlEinlesen("Bitte geben Sie die Kosten für Autoversicherung ein: ");
+
+    Klarna = ZahlEinlesen("Bitte geben Sie die Kosten für Klarna ein: ");
+
+    sonstigeAusgabenJanett = ZahlEinlesen("Bitte geben Sie die Kosten für den sonstige Ausgaben ein: ");
+
+    // Berechnung der Gesamtausgaben
+
+    double gesamtAusgabenJanett = LebensmittelJanett
+        + AutoleasingJanett
+        + Kredit1
+        + Kredit2
+        + Tanken
+        + HandyJanett
+        + Amazon
+        + Netflix
+        + Disney
+        + Autoversicherung
+        + Klarna
+        + sonstigeAusgaben;
+       
+    // Ausgabe
+    Console.WriteLine("MONATLICHE Ausgaben");
+    Console.WriteLine("------------------------------");
+    Console.WriteLine($"LebensmittelJanett:{LebensmittelJanett,8:N2} Euro");
+    Console.WriteLine($"AutoleasingJanett: {AutoleasingJanett,8:N2} Euro");
+    Console.WriteLine($"Kredit1:           {Kredit1,8:N2} Euro");
+    Console.WriteLine($"Kredit2:           {Kredit2,8:N2} Euro");
+    Console.WriteLine($"Spritgeld:         {Spritgeld,8:N2} Euro");
+    Console.WriteLine($"KindergartenLilly: {KindergartenLilly,8:N2} Euro");
+    Console.WriteLine($"HandyJanett:       {HandyJanett,8:N2} Euro");
+    Console.WriteLine($"Amazon:            {Amazon,8:N2} Euro");
+    Console.WriteLine($"Netflix:           {Netflix,8:N2} Euro");
+    Console.WriteLine($"Disney:            {Disney,8:N2} Euro");
+    Console.WriteLine($"Autoversicherung:  {Autoversicherung,8:N2} Euro");
+    Console.WriteLine($"Klarna:            {Klarna,8:N2} Euro");
+    Console.WriteLine($"sonstige Ausgaben: {sonstigeAusgaben,8:N2} Euro");
+    Console.WriteLine("------------------------------");
+    Console.WriteLine($"Gesamtausgaben:    {gesamtAusgabenJanett,8:N2} Euro");
+    #endregion
+
+ double gesamtausgaben = gesamtAusgabenBen + gesamtAusgabenJanett;
+
+    //Überschuss am Monatsende
+    double ueberschuss = geamteinnahmen - gesamtausgaben;
 if (ueberschuss > 0)
 {
+    Console.WriteLine($"Monatlicher Überschuss: {ueberschuss:N2} Euro");
     Console.WriteLine("Der Haushalt hat diesen Monat einen Überschuss. Er ist wirtschaftlich gesund.");
-}
+    Console.WriteLine($"Durch den Überschuss von {ueberschuss:N2} Euro kann der Haushalt Rücklagen bilden oder Schulden abbauen.");
+    }
 else if (ueberschuss == 0)
 {
-    Console.WriteLine("Einnahmen und Ausgaben sind genau ausgeglichen.");
+    Console.WriteLine("Monatlicher Restbetrag: 0.00 Euro");
+    Console.WriteLine("Einnahmen und Ausgaben sind genau ausgeglichen. Es kann kein finanzieller Puffer aufgebaut werden");
 }
 else
 {
+    Console.WriteLine("Monatliches Defizit: {Math.Abs(ueberschuss):N2} Euro");
     Console.WriteLine("Achtung: Die Ausgaben sind höher als die Einnahmen. Auf dauer wird ein sehr großes Minus auflaufen");
 }
 
@@ -156,7 +244,7 @@ Console.WriteLine();
 Console.WriteLine("MONATLICHE AUSWERTUNG");
 Console.WriteLine("--------------------------------");
 Console.WriteLine($"Gesamteinnahmen: {geamteinnahmen,8:N2} Euro");
-Console.WriteLine($"Gesamtausgaben:  {gesamtAusgaben,8:N2} Euro");
+Console.WriteLine($"Gesamtausgaben:  {gesamtausgaben,8:N2} Euro");
 Console.WriteLine("--------------------------------");
 Console.WriteLine($"Überschuss:      {ueberschuss,8:N2} Euro");
 
@@ -228,8 +316,9 @@ double neueGesamteinnahmen =
     + neuerUnterhalt
     + neueSonstigeEinnahmen;
 
-// Die vorhandenen Ausgaben werden erneut verwendet
-double neuerUeberschuss = neueGesamteinnahmen - gesamtAusgaben;
+    // Die vorhandenen Ausgaben werden erneut verwendet
+    double gesamtAusgaben = gesamtAusgabenBen + gesamtAusgabenJanett;
+    double neuerUeberschuss = neueGesamteinnahmen - gesamtAusgaben;
 
 // Ausgabe der zweiten Situation
 Console.WriteLine();
