@@ -462,21 +462,26 @@ else
 
     #endregion
 
-    Console.WriteLine();
-    Console.WriteLine("------------------------------");
-    Console.WriteLine("Möchten Sie eine neue Berechnung durchführen?");
-    Console.WriteLine("J = Programm neu starten");
-    Console.WriteLine("N = Programm beenden");
-    Console.Write("Ihre Auswahl: ");
+    do
+    {
+        Console.WriteLine();
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("Möchten Sie eine neue Berechnung durchführen?");
+        Console.WriteLine("J = Programm neu starten");
+        Console.WriteLine("N = Programm beenden");
+        Console.Write("Ihre Auswahl: ");
 
-    auswahlNeustart = Console.ReadLine()?.Trim().ToUpper() ?? "N";
+        auswahlNeustart = Console.ReadLine()?.Trim().ToUpper() ?? "";
+
+        if (auswahlNeustart != "J" && auswahlNeustart != "N")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Ungültige Eingabe. Bitte geben Sie J oder N ein.");
+        }
+
+    } while (auswahlNeustart != "J" && auswahlNeustart != "N");
 
 } while (auswahlNeustart == "J");
-
-Console.WriteLine();
-Console.WriteLine("Der Finanzplaner wurde beendet.");
-Console.WriteLine("Drücken Sie eine beliebige Taste.");
-Console.ReadKey();
 
 Console.WriteLine();
 Console.WriteLine("------------------------------");
