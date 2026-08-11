@@ -185,7 +185,7 @@ static double ZahlEinlesen(string text)
 // Zweite Situation wenn Ben bei Erlas weiter arbeitet und Janett Elterngeld Plus bekommt.
 Console.WriteLine();
 Console.WriteLine("================================");
-Console.WriteLine("SITUATION 2 – NEUE EINNAHMEN");
+Console.WriteLine("SITUATION 2 – wenn Ben bei Erlas weiter arbeitet und Janett Elterngeld Plus bekommt");
 Console.WriteLine("Die Ausgaben bleiben unverändert.");
 Console.WriteLine("================================");
 Console.WriteLine();
@@ -283,7 +283,7 @@ else
 // Dritte Situation wenn Ben die Stelle bei Schmitt und Sohn unterschrieben hat.
 Console.WriteLine();
 Console.WriteLine("================================");
-Console.WriteLine("SITUATION 3 – DREITE SITUATION");
+Console.WriteLine("SITUATION 3 – wenn Ben die Stelle bei Schmitt und Sohn unterschrieben hat");
 Console.WriteLine("Die Ausgaben bleiben unverändert.");
 Console.WriteLine("================================");
 Console.WriteLine();
@@ -359,19 +359,78 @@ Console.WriteLine($"Bisheriger Überschuss: {ueberschuss,10:N2} Euro");
 Console.WriteLine($"Neuer Überschuss:      {neuerUeberschuss3,10:N2} Euro");
 Console.WriteLine($"Veränderung:           {unterschied,10:N2} Euro");
 
-if (unterschied > 0)
+if (unterschied3 > 0)
 {
     Console.WriteLine(
-        $"Die neue Situation ist monatlich um {unterschied:N2} Euro besser.");
+        $"Die dritte Situation ist monatlich um {unterschied3:N2} Euro besser.");
 }
-else if (unterschied < 0)
+else if (unterschied3 < 0)
 {
     Console.WriteLine(
-        $"Die neue Situation ist monatlich um {Math.Abs(unterschied):N2} Euro schlechter.");
+        $"Die dritte Situation ist monatlich um {Math.Abs(unterschied3):N2} Euro schlechter.");
 }
 else
 {
     Console.WriteLine("Beide Situationen führen zum gleichen Ergebnis.");
+}
+
+#endregion
+
+#region Situation 2 und 3 vergleichen
+
+Console.WriteLine();
+Console.WriteLine("VERGLEICH SITUATION 2 UND 3");
+Console.WriteLine("------------------------------");
+
+double restbetrag2 = neuerUeberschuss;
+double restbetrag3 = neuerUeberschuss3;
+double unterschiedSituation2Und3 = restbetrag3 - restbetrag2;
+
+Console.WriteLine($"Restbetrag Situation 2: {restbetrag2,10:N2} Euro");
+Console.WriteLine($"Restbetrag Situation 3: {restbetrag3,10:N2} Euro");
+Console.WriteLine($"Veränderung:            {unterschiedSituation2Und3,10:N2} Euro");
+
+if (unterschiedSituation2Und3 > 0)
+{
+    Console.WriteLine(
+        $"Situation 3 ist monatlich um {unterschiedSituation2Und3:N2} Euro besser als Situation 2.");
+}
+else if (unterschiedSituation2Und3 < 0)
+{
+    Console.WriteLine(
+        $"Situation 3 ist monatlich um {Math.Abs(unterschiedSituation2Und3):N2} Euro schlechter als Situation 2.");
+}
+else
+{
+    Console.WriteLine("Situation 2 und Situation 3 sind finanziell gleich.");
+}
+
+#endregion
+
+#region Gesamtauswertung aller drei Situationen
+
+Console.WriteLine();
+Console.WriteLine("GESAMTAUSWERTUNG");
+Console.WriteLine("------------------------------");
+
+double besterRestbetrag = Math.Max(
+    ueberschuss,
+    Math.Max(neuerUeberschuss, neuerUeberschuss3)
+);
+
+Console.WriteLine($"Höchster Restbetrag: {besterRestbetrag:N2} Euro");
+
+if (besterRestbetrag == ueberschuss)
+{
+    Console.WriteLine("Situation 1 ist finanziell am günstigsten.");
+}
+else if (besterRestbetrag == neuerUeberschuss)
+{
+    Console.WriteLine("Situation 2 ist finanziell am günstigsten.");
+}
+else
+{
+    Console.WriteLine("Situation 3 ist finanziell am günstigsten.");
 }
 
 #endregion
