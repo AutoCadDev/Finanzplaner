@@ -1,5 +1,11 @@
 ﻿using System.Diagnostics.Metrics;
 
+string auswahlNeustart;
+
+do
+{
+Console.Clear();
+
 Console.WriteLine("FINANZPLANER");
 Console.WriteLine("------------------------------");
 Console.WriteLine("Private Haushaltsplanung");
@@ -453,4 +459,27 @@ else
     Console.WriteLine("Situation 3 ist finanziell am günstigsten.");
 }
 
-#endregion
+
+    #endregion
+
+    Console.WriteLine();
+    Console.WriteLine("------------------------------");
+    Console.WriteLine("Möchten Sie eine neue Berechnung durchführen?");
+    Console.WriteLine("J = Programm neu starten");
+    Console.WriteLine("N = Programm beenden");
+    Console.Write("Ihre Auswahl: ");
+
+    auswahlNeustart = Console.ReadLine()?.Trim().ToUpper() ?? "N";
+
+} while (auswahlNeustart == "J");
+
+Console.WriteLine();
+Console.WriteLine("Der Finanzplaner wurde beendet.");
+Console.WriteLine("Drücken Sie eine beliebige Taste.");
+Console.ReadKey();
+
+Console.WriteLine();
+Console.WriteLine("------------------------------");
+Console.WriteLine("Auswertung abgeschlossen.");
+Console.WriteLine("Drücken Sie eine beliebige Taste, um das Programm zu beenden.");
+Console.ReadKey();
