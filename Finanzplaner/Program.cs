@@ -426,7 +426,18 @@ double besterRestbetrag = Math.Max(
 
 Console.WriteLine($"Höchster Restbetrag: {besterRestbetrag:N2} Euro");
 
-if (ueberschuss == neuerUeberschuss &&
+    if (besterRestbetrag < 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("WARNUNG: In allen Situationen sind die Ausgaben höher als die Einnahmen.");
+    }
+    else if (besterRestbetrag == 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Hinweis: In der besten Situation bleibt kein finanzieller Überschuss.");
+    }
+
+    if (ueberschuss == neuerUeberschuss &&
     neuerUeberschuss == neuerUeberschuss3)
 {
     Console.WriteLine("Alle drei Situationen sind finanziell gleich.");
@@ -462,6 +473,7 @@ else
 
     #endregion
 
+#region Programmende oder neue Berechnung starten
     do
     {
         Console.WriteLine();
@@ -482,6 +494,8 @@ else
     } while (auswahlNeustart != "J" && auswahlNeustart != "N");
 
 } while (auswahlNeustart == "J");
+
+#endregion
 
 Console.WriteLine();
 Console.WriteLine("------------------------------");
