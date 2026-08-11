@@ -376,7 +376,7 @@ else
 
 #endregion
 
-#region Situation 2 und 3 vergleichen
+#region Situation 2 mit Situation 3 vergleichen
 
 Console.WriteLine();
 Console.WriteLine("VERGLEICH SITUATION 2 UND 3");
