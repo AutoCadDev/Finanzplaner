@@ -420,7 +420,27 @@ double besterRestbetrag = Math.Max(
 
 Console.WriteLine($"Höchster Restbetrag: {besterRestbetrag:N2} Euro");
 
-if (besterRestbetrag == ueberschuss)
+if (ueberschuss == neuerUeberschuss &&
+    neuerUeberschuss == neuerUeberschuss3)
+{
+    Console.WriteLine("Alle drei Situationen sind finanziell gleich.");
+}
+else if (ueberschuss == neuerUeberschuss &&
+         ueberschuss == besterRestbetrag)
+{
+    Console.WriteLine("Situation 1 und Situation 2 sind finanziell am günstigsten.");
+}
+else if (ueberschuss == neuerUeberschuss3 &&
+         ueberschuss == besterRestbetrag)
+{
+    Console.WriteLine("Situation 1 und Situation 3 sind finanziell am günstigsten.");
+}
+else if (neuerUeberschuss == neuerUeberschuss3 &&
+         neuerUeberschuss == besterRestbetrag)
+{
+    Console.WriteLine("Situation 2 und Situation 3 sind finanziell am günstigsten.");
+}
+else if (besterRestbetrag == ueberschuss)
 {
     Console.WriteLine("Situation 1 ist finanziell am günstigsten.");
 }
