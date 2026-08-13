@@ -1,0 +1,146 @@
+﻿<Window x:Class="Finanzplaner_Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Finanzplaner"
+        Height="720"
+        Width="1200"
+        MinHeight="600"
+        MinWidth="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F7FA">
+
+    <Grid OpacityMask="Black">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Navigation links -->
+        <Border Grid.Column="0"
+                Background="#16324F">
+
+            <StackPanel Margin="20">
+
+                <TextBlock Text="FINANZPLANER"
+                           Foreground="White"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Margin="0,15,0,40" FontFamily="Comic Sans MS"/>
+
+                <Button Content="Dashboard"
+                        Height="50"
+                        Margin="0,0,0,10"
+                        Click="DashboardButton_Click" Background="#FFBBAAAA"/>
+
+                <Button Content="Einnahmen"
+                        Height="50"
+                        Margin="0,0,0,10"
+                        Click="EinnahmenButton_Click" Background="#FF5DB138"/>
+
+                <Button Content="Ausgaben"
+                        Height="50"
+                        Margin="0,0,0,300"
+                        Click="AusgabenButton_Click" Background="#FFED2D2D"/>
+
+                
+            </StackPanel>
+
+        </Border>
+
+        <!-- Inhaltsbereich rechts -->
+        <Grid   x:Name="InhaltsBereich"
+                Grid.Column="1"
+                Margin="35">
+
+            <StackPanel Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+
+                <TextBlock Text="Dashboard"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="#FF2A4E5F" FontFamily="Comic Sans MS"/>
+
+                <TextBlock Text="Übersicht deiner monatlichen Finanzen"
+                           FontSize="16"
+                           Foreground="#607D8B"
+                           Margin="0,5,0,30"/>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Einnahmen -->
+                    <Border Grid.Column="0"
+                            Background="White"
+                            CornerRadius="12"
+                            Padding="25">
+
+                        <StackPanel>
+                            <TextBlock Text="Einnahmen"
+                                       Foreground="#607D8B"
+                                       FontSize="16"/>
+
+                            <TextBlock Text="0,00 €"
+                                       Foreground="#FF5DB138"
+                                       FontSize="30"
+                                       FontWeight="Bold"
+                                       Margin="0,10,0,0"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- Ausgaben -->
+                    <Border Grid.Column="2"
+                            Background="White"
+                            CornerRadius="12"
+                            Padding="25">
+
+                        <StackPanel>
+                            <TextBlock Text="Ausgaben"
+                                       Foreground="#607D8B"
+                                       FontSize="16"/>
+
+                            <TextBlock Text="0,00 €"
+                                       Foreground="#FFED2D2D"
+                                       FontSize="30"
+                                       FontWeight="Bold"
+                                       Margin="0,10,0,0"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- Überschuss -->
+                    <Border Grid.Column="4"
+                            Background="White"
+                            CornerRadius="12"
+                            Padding="25">
+
+                        <StackPanel>
+                            <TextBlock Text="Überschuss"
+                                       Foreground="#607D8B"
+                                       FontSize="16"/>
+
+                            <TextBlock Text="0,00 €"
+                                       Foreground="#1565C0"
+                                       FontSize="30"
+                                       FontWeight="Bold"
+                                       Margin="0,10,0,0"/>
+                        </StackPanel>
+
+                     </Border>
+
+                </Grid>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
