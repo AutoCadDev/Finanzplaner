@@ -2,13 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Finanzplaner"
+        Icon="Assets/Finanzplaner.ico"
         Height="720"
         Width="1200"
         MinHeight="600"
         MinWidth="900"
         WindowStartupLocation="CenterScreen"
         Background="#F5F7FA">
-
+    
+    
     <Grid OpacityMask="Black">
 
         <Grid.ColumnDefinitions>

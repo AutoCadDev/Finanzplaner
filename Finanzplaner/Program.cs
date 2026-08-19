@@ -50,7 +50,7 @@ sonstigeEinnahmen = ZahlEinlesen("Bitte geben Sie die sonstigen Einnahmen ein: "
     #region Ausgaben von Ben 
 
     // Ausgabe der Einnahmen
-    Console.WriteLine("MONATLICHE EINNAHMEN");
+Console.WriteLine("MONATLICHE EINNAHMEN");
 Console.WriteLine("------------------------------");
 Console.WriteLine($"Gehalt Ben:        {gehaltBen,8:N2} Euro");
 Console.WriteLine($"Gehalt Janett:     {gehaltJanett,8:N2} Euro");
@@ -63,8 +63,11 @@ Console.WriteLine($"sonstige Einnahmen:{sonstigeEinnahmen,8:N2} Euro");
 Console.WriteLine("------------------------------");
 Console.WriteLine($"Gesamteinnahmen:   {geamteinnahmen,8:N2} Euro");
 
-//Ausgaben 
-double Miete = 0;
+    Console.WriteLine("------------------------------");
+    Console.WriteLine("Bitte gib nun die Ausgaben von Ben ein. ");
+
+    //Ausgaben 
+    double Miete = 0;
 double Strom = 0;
 double Internet = 0;
 double Handy = 0;
@@ -141,8 +144,11 @@ Console.WriteLine($"Gesamtausgaben:    {gesamtAusgabenBen,8:N2} Euro");
 
     #endregion
 
+    Console.WriteLine("------------------------------");
+    Console.WriteLine("Bitte gib nun die Ausgaben von Janett ein. ");
+
     #region Ausgaben von Janett
- 
+
     //Ausgaben 
     double LebensmittelJanett = 0;
     double AutoleasingJanett = 0;
@@ -334,7 +340,8 @@ if (neuerUeberschuss > 0)
 {
     Console.WriteLine(
         "Der Haushalt hat in der neuen Situation einen Überschuss.");
-}
+    Console.WriteLine($"Durch den Überschuss von {neuerUeberschuss:N2} Euro kann der Haushalt Rücklagen bilden oder Schulden abbauen.");
+    }
 else if (neuerUeberschuss == 0)
 {
     Console.WriteLine(
@@ -356,20 +363,21 @@ Console.WriteLine($"Bisheriger Überschuss: {ueberschuss,10:N2} Euro");
 Console.WriteLine($"Neuer Überschuss:      {neuerUeberschuss,10:N2} Euro");
 Console.WriteLine($"Veränderung:           {unterschied,10:N2} Euro");
 
-if (unterschied > 0)
-{
-    Console.WriteLine(
-        $"Die neue Situation ist monatlich um {unterschied:N2} Euro besser.");
-}
-else if (unterschied < 0)
-{
-    Console.WriteLine(
-        $"Die neue Situation ist monatlich um {Math.Abs(unterschied):N2} Euro schlechter.");
-}
-else
-{
-    Console.WriteLine("Beide Situationen führen zum gleichen Ergebnis.");
-}
+    if (unterschied > 0)
+    {
+        Console.WriteLine($"Die neue Situation ist monatlich um {unterschied:N2} Euro besser.");
+
+        Console.WriteLine($"Durch den neuen Überschuss kann der Haushalt immernoch Rücklagen in Höhe von {neuerUeberschuss:N2} Euro bilden oder Schulden abbauen.");
+    }
+    else if (unterschied < 0)
+    {
+        Console.WriteLine(
+            $"Die neue Situation ist monatlich um {Math.Abs(unterschied):N2} Euro schlechter.");
+    }
+    else
+    {
+        Console.WriteLine("Beide Situationen führen zum gleichen Ergebnis.");
+    }
 
 #endregion
 
@@ -432,7 +440,8 @@ if (neuerUeberschuss3 > 0)
 {
     Console.WriteLine(
         "Der Haushalt hat in der neuen Situation einen Überschuss.");
-}
+        Console.WriteLine($"Durch den Überschuss von {neuerUeberschuss3:N2} Euro kann der Haushalt Rücklagen bilden oder Schulden abbauen.");
+    }
 else if (neuerUeberschuss3 == 0)
 {
     Console.WriteLine(

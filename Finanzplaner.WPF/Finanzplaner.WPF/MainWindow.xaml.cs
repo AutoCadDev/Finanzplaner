@@ -310,6 +310,8 @@ namespace Finanzplaner_Wpf
         private TextBox Amazon = new TextBox();
         private TextBox Netflix = new TextBox();
         private TextBox Disney = new TextBox();
+        private TextBox GEZ = new TextBox();
+        private TextBox Spotify = new TextBox();
         private TextBox Autoleasing = new TextBox();
         private TextBox Kindergarten = new TextBox();
         private TextBox Klarna = new TextBox();
@@ -330,6 +332,8 @@ namespace Finanzplaner_Wpf
         private double disneyWert;
         private double autoleasingWert;
         private double kindergartenWert;
+        private double gezWert;
+        private double spotifyWert;
         private double klarnaWert;
         private double gesamtAusgaben;
 
@@ -427,6 +431,17 @@ namespace Finanzplaner_Wpf
             Disney = NeuesEingabefeld(disneyWert);
             ausgabenSeite.Children.Add(Disney);
 
+            // GEZ
+            ausgabenSeite.Children.Add(NeueBeschriftung("GEZ"));
+            GEZ = NeuesEingabefeld(gezWert);
+            ausgabenSeite.Children.Add(GEZ);
+
+
+            // Spotify
+            ausgabenSeite.Children.Add(NeueBeschriftung("Spotify"));
+            Spotify = NeuesEingabefeld(spotifyWert);
+            ausgabenSeite.Children.Add(Spotify);
+
             // Autoleasing
             ausgabenSeite.Children.Add(NeueBeschriftung("Autoleasing"));
             Autoleasing = NeuesEingabefeld(autoleasingWert);
@@ -490,6 +505,8 @@ namespace Finanzplaner_Wpf
             amazonWert = WertEinlesen(Amazon);
             netflixWert = WertEinlesen(Netflix);
             disneyWert = WertEinlesen(Disney);
+            gezWert = WertEinlesen(GEZ);
+            spotifyWert = WertEinlesen(Spotify);
             autoleasingWert = WertEinlesen(Autoleasing);
             kindergartenWert = WertEinlesen(Kindergarten);
             klarnaWert = WertEinlesen(Klarna);
@@ -508,6 +525,8 @@ namespace Finanzplaner_Wpf
                 amazonWert +
                 netflixWert +
                 disneyWert +
+                gezWert +
+                spotifyWert +
                 autoleasingWert +
                 kindergartenWert +
                 klarnaWert;
@@ -870,6 +889,18 @@ namespace Finanzplaner_Wpf
 
             new PieSeries<double>
             {
+                Name = "GEZ",
+                Values = new double[] { disneyWert }
+            },
+
+            new PieSeries<double>
+            {
+                Name = "Spotify",
+                Values = new double[] { disneyWert }
+            },
+
+            new PieSeries<double>
+            {
                 Name = "Autoleasing",
                 Values = new double[] { autoleasingWert }
             },
@@ -978,6 +1009,8 @@ namespace Finanzplaner_Wpf
             amazonWert = 0;
             netflixWert = 0;
             disneyWert = 0;
+            gezWert = 0;
+            spotifyWert = 0;
             autoleasingWert = 0;
             kindergartenWert = 0;
             klarnaWert = 0;
